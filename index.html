@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="nav">
+            <div class="nav-logo-div container" onclick="reload()">
+                <a href="#" class="company-logo">
+                <img src="./assets/My_project-removebg-preview.png" alt="logo">
+            </a></div>
+            
+                
+            <ul class="nav-links-ul">
+                <li id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                <li id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                <li id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                <li id="technology" onclick="onNavItemClick('technology')">Technology</li>
+            </ul>
+
+            <div class="nav-search container">
+                <input type="text" class="searchBar"placeholder="e.g. Science" id="search-Bar">
+                <button id = "searchBtn"class="searchBtn">Search</button>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <main>
+
+        <div class="card-container container" id="card-container">
+
+        </div>
+
+
+    </main>
+
+        <template id="template-news-card">
+
+            <!-- 
+                we place card in tempalte so that we can show dynamic cards with api call
+                elements that we place in template gets disappear from DOM
+            -->
+
+           
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/400x200" alt="" class="news-img" id="news-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="news-title" id="news-title">This is title</h3>
+                        <h6 class="news-src" id="news-src">Magzine name 1/1/2001</h6>
+                        <p class ="news-desc"id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laudantium nobis eum reiciendis placeat nostrum molestias mollitia amet possimus quis?</p>
+                    </div>
+                </div>
+    
+            
+
+
+        </template>
+
+
+  
+        <footer class="footer">
+           <p>Cpoyright &copy; 2023 SMC News. All Rights Reserved.</p> 
+        </footer>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
